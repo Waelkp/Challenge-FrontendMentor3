@@ -37,6 +37,10 @@
 /* Start Global Customize */
 .holder .card {
   padding: 45px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 .holder .card .info {
   margin: 0px 0px 90px;
