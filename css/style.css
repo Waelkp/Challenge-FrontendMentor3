@@ -1,0 +1,104 @@
+:root {
+  /* ### Primary */
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  /* ### Neutral*/
+  /* paragraphs */
+  --Transparent-white-Pra: hsla(0, 0%, 100%, 0.75);
+  /* (background, headings, buttons) */
+  --Very-light-gray-BHB: hsl(0, 0%, 95%);
+  /* Font */
+  --FontSize: 15px;
+  --FontBIG: "Big Shoulders Display", sans-serif;
+  --FontLex: "Lexend Deca", sans-serif;
+  /* Font */
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.holder {
+  width: 965px;
+  /* center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Flexbox */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow: hidden;
+  border-radius: 10px;
+}
+/* Start Global Customize */
+.holder .card {
+  padding: 45px 63px;
+}
+.holder .card .info {
+  margin: 0px 0px 90px;
+}
+.holder .card .info h2 {
+  text-transform: uppercase;
+  font-family: var(--FontBIG);
+  color: var(--Very-light-gray-BHB);
+  font-size: 32px;
+  font-weight: bold;
+}
+.holder .card .info p {
+  color: var(--Very-light-gray-BHB);
+  font-family: var(--FontLex);
+  font-size: var(--FontSize);
+  line-height: 1.7;
+}
+.holder .card .btn {
+  font-family: var(--FontLex);
+  width: 70%;
+  padding: 15px;
+  border-radius: 40px;
+  border: none;
+  transition: 0.5s;
+  border: 1px solid var(--Very-light-gray-BHB);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.holder .card .btn:hover {
+  background-color: transparent;
+  color: var(--Very-light-gray-BHB) !important;
+}
+/* End Global Customize */
+.holder .one {
+  background-color: var(--Bright-orange);
+}
+.holder .two {
+  background-color: var(--Dark-cyan);
+}
+.holder .three {
+  background-color: var(--Very-dark-cyan);
+}
+.holder .one .btn {
+  color: var(--Bright-orange);
+}
+.holder .two .btn {
+  color: var(--Dark-cyan);
+}
+.holder .three .btn {
+  color: var(--Very-dark-cyan);
+}
+@media (max-width: 992px) {
+  .holder {
+    grid-template-columns: 1fr;
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+  .card {
+    width: 100%;
+  }
+  .holder .card .info {
+    margin: 0px 0px 35px;
+  }
+}
